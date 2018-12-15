@@ -24,16 +24,30 @@
 
 	        const float pps = 100.0; //pixes per second
 
+	        float wave(vec2 st, float wavewidth, float waveheight, float heightposwave, float widthposwave){
+	        	return step(st.y, ((sin(st.x*wavewidth+u_time +widthposwave)+heightposwave)/waveheight));
+	        }
+
 	        void main() {
+	        	vec2 st = gl_FragCoord.xy/u_resolution.xy;
+	        	
+	        	//float pos = mod(gl_FragCoord.y, sin(gl_FragCoord.x+u_time)*100.0 + u_resolution.y/2.0); //cool
+	        	//float pos = mod(st.y, sin(st.x+u_time));// also cool
 
-	        	float posy = gl_FragCoord.y + sin(u_time) * pps;
-	        	float posx = gl_FragCoord.x + u_time * -pps;
 
-	        	float color = mod(posy, u_resolution.y/2.0);
+    			vec3 w1 = wave(st, 1.3, 5.5, 2.25,-3.9) * vec3(0.1, 0.2, 0.2);
+    			vec3 w2 = wave(st, 1.3, 5.5, 2.25,6.7) * vec3(0.3, 0.2, 0.6);
+    			vec3 w3 = wave(st, 1.3, 5.5, 2.25,5.5) * vec3(0.0, 0.3, 0.5);
+    			vec3 w4 = wave(st, 1.3, 5.5, 2.25,2.3) * vec3(0.4, 0.2, 0.1);
+    			vec3 w5 = wave(st, 1.3, 5.5, 5.25,-1.3) * vec3(0.1, 0.2, 0.4);
 
-	            vec2 st = gl_FragCoord.xy/u_resolution.xy;
-	            //gl_FragColor=vec4(0.5, 0.2, 0.2, 1.0);
-	            gl_FragColor=vec4(0.5* color, 0.2 * color, 0.2* color, 1.0);
+    			vec3 w = mix(w1, w2, 0.5);
+    			w = mix(w, w3, 0.5);
+    			w = mix(w, w4, 0.5);
+    			w = mix(w, w5, 0.5);
+
+	            gl_FragColor=vec4(w, 1.0);
+	            
 	        }
 		`;
 
@@ -52,7 +66,7 @@
 
 		//geometry
 		var cubeGeometry = new THREE.BoxGeometry(1, 1,1 );
-		var planeGeometry = new THREE.PlaneGeometry(10, 10, 10);
+		var planeGeometry = new THREE.PlaneGeometry(15, 15, 15);
 		var material = new THREE.MeshBasicMaterial( {color: 0x0c6297  });
 		var cube = new THREE.Mesh(cubeGeometry, material);
 		var plane = new THREE.Mesh(planeGeometry, planematerial);
@@ -62,16 +76,16 @@
 		camera.position.z = 5;
 		plane.position.z = -2;
 
-		scene.add(cube);
+		//scene.add(cube);
 		scene.add(plane);
 
 		//cube list
 		var cubes =  new Array(numCubes);
-		for(i = 0; i < numCubes; i++){
-			var lcube = new THREE.Mesh(cubeGeometry, material);
-			cubes.push(lcube);
-			scene.add(lcube);
-		}
+		// for(i = 0; i < numCubes; i++){
+		// 	var lcube = new THREE.Mesh(cubeGeometry, material);
+		// 	cubes.push(lcube);
+		// 	scene.add(lcube);
+		// }
 		
 		function resize(){
 			var width = canvas.clientWidth;
