@@ -2,7 +2,7 @@
 		var clock = new THREE.Clock(true);
 		var scene = new THREE.Scene();
 		var canvas = document.querySelector("canvas");
-		var camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
+		var camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.document.documentElement.clientHeight, 0.1, 1000);
 		var renderer = new THREE.WebGLRenderer();
 		renderer.setSize({canvas: canvas});
 		document.body.appendChild(renderer.domElement);
@@ -171,7 +171,7 @@
 		
 		function resize(){
 			var width = canvas.clientWidth;
-			var height = canvas.clientHeight;
+			var height = window.document.documentElement.clientHeight;
 
 			if(width != canvas.width || height != canvas.height)
 			renderer.setSize(width, height, false);
