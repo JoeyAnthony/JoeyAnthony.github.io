@@ -72,6 +72,10 @@
 
 		var cubefs = 
 		`
+			/*
+			* Shading model from Real Time Rendering used.
+			*/
+
 			uniform vec2 u_resolution;
 			uniform float u_time;
 			uniform vec3 u_surface;
