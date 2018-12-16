@@ -150,16 +150,16 @@
 		var cubeGeometry = new THREE.BoxGeometry(1, 1, 1);
 		var planeGeometry = new THREE.PlaneGeometry(15, 15, 1);
 		var material = new THREE.MeshBasicMaterial( {color: 0x0c6297  });
-		var cube = new THREE.Mesh(cubeGeometry, cubematerial);
-		var plane = new THREE.Mesh(planeGeometry, planematerial);
+		var centerCube = new THREE.Mesh(cubeGeometry, cubematerial);
+		var backgroundPlane = new THREE.Mesh(planeGeometry, planematerial);
 
 
 		//camera var
 		camera.position.z = 5;
-		plane.position.z = -2;
+		backgroundPlane.position.z = -2;
 
-		scene.add(cube);
-		scene.add(plane);
+		scene.add(centerCube);
+		scene.add(backgroundPlane);
 
 		//cube list
 		var cubes =  new Array(numCubes);
@@ -188,13 +188,14 @@
 			uniforms.u_resolution.value = new THREE.Vector2(canvas.clientWidth, canvas.clientHeight);
 			uniforms.u_surface.value = new THREE.Vector3(0.8, 0.2, 0.3);
 
+
 			cubes.forEach(transform);
 
 			//updating code
-			cube.rotation.x += 0.01;
-			cube.rotation.y += 0.01;
+			centerCube.rotation.x += 0.01;
+			centerCube.rotation.y += 0.01;
 			//plane.scale.y = canvas.clientWidth/canvas.clientHeight;
-			plane.scale.x = canvas.clientWidth/canvas.clientHeight;
+			backgroundPlane.scale.x = canvas.clientWidth/canvas.clientHeight;
 
 			//render call
 			renderer.render(scene, camera);
@@ -203,8 +204,10 @@
 		
 		function transform(localcube, index) {
 			var mag = 3;
+			var scroll = document.documentElement.scrollTop / canvas.height;
 			localcube.position.x = mag * Math.cos(2*Math.PI/ numCubes * index + clock.getElapsedTime());
-			localcube.position.y = mag * Math.sin(2*Math.PI/ numCubes * index+ clock.getElapsedTime());
+			localcube.position.y = scroll + mag * Math.sin(2*Math.PI/ numCubes * index+ clock.getElapsedTime());
+			centerCube.position.y = 0.0 + scroll;
 
 			localcube.rotation.x = Math.cos(clock.getElapsedTime());
 			localcube.rotation.y = Math.sin(clock.getElapsedTime());
