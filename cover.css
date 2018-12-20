@@ -139,6 +139,9 @@ img {
   font-weight: 700;
 }
 
+.nice-text{
+  text-align: justify;
+}
 
 /*
  * Footer
