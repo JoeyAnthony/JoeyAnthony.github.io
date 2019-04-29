@@ -125,6 +125,11 @@ img {
   padding:  0 0 10em ;
  }
 
+  .main-image{
+    width: 70%;
+  height: 70%;
+ }
+
 /*
  * Cover
  */
