@@ -51,6 +51,13 @@ canvas {
   z-index: -9999; 
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
 .main{
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 }

@@ -12,7 +12,7 @@
   <!-- Bootstrap core CSS and JS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <meta name="theme-color" content="#e8743a" />
+  <meta name="theme-color" content="#e8743a"/>
 
   <!-- Custom styles -->
   <link href="cover.css" rel="stylesheet">
@@ -24,10 +24,10 @@
 </head>
 
 <!--Navigation bar -->
-  <div class="container-fluid fixed-top">
+  <div class="container-fluid fixed-top mb-auto">
     <div class="row">
       <nav class="container-fluid nav nav-masthead justify-content-center" style="background-color:rgb(50, 59, 68);">
-        <a class="nav-link active" href="#About">About</a>
+        <a class="nav-link" href="#About">About</a>
         <a class="nav-link" href="#Work">Work</a>
         <a class="nav-link" href="#Contact">Contact</a>
       </nav>
@@ -44,7 +44,7 @@
       <div class="splash-screen flex-splash">
         <h1 class="cover-heading">Joey van Hoek</h1>
         <div class="container-fluid flex-splash">
-        <a href="https://www.linkedin.com/in/joey-van-hoek-b24359132/?originalSubdomain=nl">LinkedIn</a> 
+        <a href="www.linkedin.com/in/jvhoek">LinkedIn</a> 
         <a href="https://github.com/JoeyAnthony">GitHub</a> 
         <!-- <a href="">Email</a> -->
         </div>
@@ -52,15 +52,16 @@
       </div>
 
       <!-- About -->
-      <h1 id="About" class="cover-heading">About</h1>
+      <div class="anchor" id="About"></div>
+      <h1  class="cover-heading">About</h1>
       <p class="lead">I am a computer science graduate from the Netherlands who studied at Avans Hogeschool. Beneath you will find some of the projects I have been working on!</p>
 
       <!-- Work -->
-      
       <div class="container-fluid">
         <div class="col">
 
           <div class=" justify-content-center work-title">
+            <div class="anchor" id="Work"></div>
             <h1 id="Work" class="cover-heading">Work</h1>
           </div>
 		  
@@ -124,7 +125,8 @@
       </div>
 
       <!-- Contact -->
-      <h1 id="Contact" >Contact</h1>
+      <div id="Contact" class="anchor"></div>
+      <h1>Contact</h1>
       <div class="main-content flex-column">
         <!-- <p class="lead">Email</p> -->
         <a class="lead" href="mailto:jvanhoek@hotmail.com">jvanhoek@hotmail.com</a>
