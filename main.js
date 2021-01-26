@@ -73,7 +73,7 @@
 		var cubefs = 
 		`
 			/*
-			* Shading model from Real Time Rendering used.
+			* Shading model from "Real Time Rendering" used.
 			*/
 
 			uniform vec2 u_resolution;
