@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Portfolio website">
+  <meta name="author" content="Joey van Hoek">
   <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
   <title>Joey van Hoek</title>
 
   <!-- Bootstrap core CSS and JS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  <meta name="theme-color" content="#e8743a"/>
+  <meta name="theme-color" content="#e8743a" />
 
   <!-- Custom styles -->
   <link href="cover.css" rel="stylesheet">
@@ -20,19 +22,20 @@
   <!-- Load three.js and background script-->
   <script src="dist/js/three.js"></script>
   <canvas style="position: fixed;"></canvas>
-  <script src="main.js"></script>
+  <script src="main.js" cubes="1" ></script>
 </head>
 
 <!--Navigation bar -->
-  <div class="container-fluid fixed-top mb-auto">
-    <div class="row">
-      <nav class="container-fluid nav nav-masthead justify-content-center" style="background-color:rgb(50, 59, 68);">
-        <a class="nav-link" href="#About">About</a>
-        <a class="nav-link" href="#Work">Work</a>
-        <a class="nav-link" href="#Contact">Contact</a>
-      </nav>
-    </div>
+<div class="container-fluid fixed-top mb-auto">
+  <div class="row">
+    <nav class="container-fluid nav nav-masthead justify-content-center" style="background-color:rgb(50, 59, 68);">
+      <a class="nav-link text-light" href="#About">About</a>
+      <a class="nav-link text-light" href="#Work">Work</a>
+      <a class="nav-link text-light" href="#Contact">Contact</a>
+      <a class="nav-link text-primary" href="pages/otherproj.html">Other Projects</a>
+    </nav>
   </div>
+</div>
 
 <body class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -44,17 +47,18 @@
       <div class="splash-screen flex-splash">
         <h1 class="cover-heading">Joey van Hoek</h1>
         <div class="container-fluid flex-splash">
-        <a href="www.linkedin.com/in/jvhoek">LinkedIn</a> 
-        <a href="https://github.com/JoeyAnthony">GitHub</a> 
-        <!-- <a href="">Email</a> -->
+          <a href="mailto:jvanhoek@hotmail.com">jvanhoek@hotmail.com</a>
+          <a href="www.linkedin.com/in/jvhoek">LinkedIn</a>
+          <a href="https://github.com/JoeyAnthony">GitHub</a>
+          <a href="https://www.instagram.com/janthonyvh/">Instagram</a>
         </div>
-
       </div>
 
       <!-- About -->
       <div class="anchor" id="About"></div>
-      <h1  class="cover-heading">About</h1>
-      <p class="lead">I am a computer science graduate from the Netherlands who studied at Avans Hogeschool. Beneath you will find some of the projects I have been working on!</p>
+      <h1 class="cover-heading">About</h1>
+      <p class="lead">I am a software engineer from the Netherlands who studied at Avans University of Applied Sciences. Beneath you
+        will find some of the projects I have been working on!</p>
 
       <!-- Work -->
       <div class="container-fluid">
@@ -64,63 +68,87 @@
             <div class="anchor" id="Work"></div>
             <h1 id="Work" class="cover-heading">Work</h1>
           </div>
-		  
-		  <div class="row justify-content-center main-content">
+
+          <div class="row justify-content-center main-content">
             <h3 class="cover-heading">Inverse Kinematics Implementation In Unreal Engine</h3>
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/mzanTXloGRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="lead nice-text">Internship project at a company called RE-liON located in Enschede where I implemented a single-chain IK with ball-socket constraints.</p>
-            <!--<a href="">GitHub Repository</a>-->
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/mzanTXloGRU" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead nice-text">Internship project at a company called RE-liON located in Enschede. I
+              implemented an Inverse Kinematics algorithm that supports single chains and ball-socket joint constraints. 
+              It was made in Unreal Engine and can be used with an animation blueprint node.</p>
+            <!--<a href="">Go to Github</a>-->
+          </div>
+
+          <div class="row justify-content-center main-content">
+            <h3 class="cover-heading">Led Stips Python</h3>
+            <img width="451" height=497 src="images/led_project.png">
+            <p class="lead nice-text">With this project I want to control large LED-strips with an interface that offers
+              many customiation options. The idea was to use it for a cosplay. It's still a work in progress.</p>
+            <a href="https://github.com/JoeyAnthony/Costume_Ignite">Go to Github</a>
           </div>
 
           <div class="row justify-content-center main-content">
             <h3 class="cover-heading">WIP Game Engine</h3>
             <img width="451" height=497 src="images/engineimg2.jpg">
-            <p class="lead nice-text">A small game engine I'm making using the knowledge I gained from studying in Germany.</p>
-            <a href="https://github.com/JoeyAnthony/Inituari">GitHub Repository</a>
+            <p class="lead nice-text">A small game engine I'm making using the knowledge I gained from studying in
+              Germany.</p>
+            <a href="https://github.com/JoeyAnthony/Inituari">Go to Github</a>
           </div>
 
           <div class="row justify-content-center main-content">
-            
+
             <div class="row justify-content-center main-image">
               <h3 class="cover-heading">Parallel</h3>
               <img width="451" height=497 src="images/parallel-poster-final.jpg">
             </div>
-            <p class="lead nice-text">A school project made with a team of 20+ people, from 2nd to 4th year and a few master students. The project was mostly focussed on the managing and communicative side of game development. The game is a 4-player coop, top-down zombie shooter with a procedurally generated map and was made in Unreal Engine. I made the camera, score tracking, split-screen and loading/spawning of the buildings using the PCG locations.</p>
+            <p class="lead nice-text">A school project made with a team of 20+ people, from 2nd to 4th year and a few
+              master students. The project was mostly focussed on the managing and communicative side of game
+              development. The game is a 4-player coop, top-down zombie shooter with a procedurally generated map and
+              was made in Unreal Engine. I made the camera, score tracking, split-screen and loading/spawning of the
+              buildings using the PCG locations.</p>
           </div>
 
           <div class="row justify-content-center main-content">
             <h3 class="cover-heading">Top-Down-Shooter Prototype</h3>
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/SGxJOsgqsA8?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="lead nice-text">A small prototype where the player shoots and dodges bullets. The idea of the project was to make my own small C++ engine, learn OpenGL and get familiar with PBR shading.</p>
-            <a href="https://github.com/JoeyAnthony/OpenGL_Engine_Project">GitHub Repository</a>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/SGxJOsgqsA8?rel=0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead nice-text">A small prototype where the player shoots and dodges bullets. The idea of the
+              project was to make my own small C++ engine, learn OpenGL and get familiar with PBR shading.</p>
+            <a href="https://github.com/JoeyAnthony/OpenGL_Engine_Project">Go to Github</a>
           </div>
 
           <div class="row justify-content-center main-content">
             <h2 class="cover-heading">Bodemonderzoek</h2>
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/TP6WQe55UQI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="lead nice-text">A university project for the education Environmental Science for Sustainable Energy and Technology (ESSET) where students walk through a recreated environment where they have to spot pollution in the soil. Group project consisting  of six members, I made the camera with the detection and a feature to export the photo's with the walked route to a PDF.</p>
-            <a href="https://github.com/JoeyAnthony/Bodemonderzoek">GitHub Repository</a>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/TP6WQe55UQI?rel=0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead nice-text">A university project for the education Environmental Science for Sustainable
+              Energy and Technology (ESSET) where students walk through a recreated environment where they have to spot
+              pollution in the soil. Group project consisting of six members, I made the camera with the detection and a
+              feature to export the photo's with the walked route to a PDF.</p>
+            <a href="https://github.com/JoeyAnthony/Bodemonderzoek">Go to Github</a>
           </div>
 
           <div class="row justify-content-center main-content">
             <h2 class="cover-heading">Augmented Reality App</h2>
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/XKqz7r3mHWg?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="lead nice-text">An Internship project at ARIndustries, Tilburg to determine if ARKit would be useful for the company’s product. It is a navigation app using ARKit, GPS and GoogleMaps.</p>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/XKqz7r3mHWg?rel=0" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="lead nice-text">An Internship project at ARIndustries, Tilburg to determine if ARKit would be
+              useful for the company’s product. It is a navigation app using ARKit, GPS and GoogleMaps.</p>
           </div>
 
-          <div class="row justify-content-center main-content">
+          <!-- <div class="row justify-content-center main-content">
             <h2 class="cover-heading">Endless Runner Game</h2>
             <iframe width="600" height="350" src="https://www.youtube.com/embed/BQoo2E1AMGs?rel=0&hd=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p class="lead nice-text">An endless runner game where the player stands in front of a camera and has to dodge objects on three lanes using motion detection. Made using C++, OpenGL, and OpenCV. Group project consisting of six members, I made the motion detection.</p>
-            <a href="https://github.com/TIProjects/Periode4-Proftaak">GitHub Repository</a>
-          </div>
+            <a href="https://github.com/TIProjects/Periode4-Proftaak">Go to Github</a>
+          </div> -->
 
-          <div class="row justify-content-center main-content">
+          <!-- <div class="row justify-content-center main-content">
             <h2 class="cover-heading">Internet Radio</h2>
             <img width="600" height="350" src="images/radiojpgpng.jpg">
             <p class="lead nice-text">A University project about making internet radio software with configurable alarms, scheduling, web server, and limited hardware resources. It plays, radio streams from the internet and the settings are configurable via hardware buttons or a web interface. Made using C, Nut/OS, and a StreamIT SIR120 internet radio. Group project consisting of six members, I made the largest part of the webserver, radio streaming and the feature to save the time to the memory.</p>
-            <a href="https://github.com/JoeyAnthony/Internet_radio">GitHub Repository</a>
-          </div>
+            <a href="https://github.com/JoeyAnthony/Internet_radio">Go to Github</a>
+          </div> -->
         </div>
       </div>
 
@@ -131,25 +159,30 @@
         <!-- <p class="lead">Email</p> -->
         <a class="lead" href="mailto:jvanhoek@hotmail.com">jvanhoek@hotmail.com</a>
       </div>
-      
+
 
     </main>
+  </div>
 
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <!--           <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
+        <!--<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
       </div>
     </footer>
 
 
     <!-- Bootstrap core JavaScript
       ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
 </body>
-    
-    </html>
+
+</html>
