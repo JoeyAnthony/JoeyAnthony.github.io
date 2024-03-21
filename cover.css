@@ -166,4 +166,18 @@ img {
   color: rgba(255, 255, 255, .5);
 }
 
+h3, h2, h1 {
+    text-shadow: 5px 5px 10px rgb(35 29 29 / 69%);
+}
 
+.button-padding a {
+    margin-right: 0.5em;
+    margin-top: 1em;
+}
+
+.button-color {
+    background-color: #FF5148 !important;
+    box-shadow: 5px 5px 15px rgb(35 29 29 / 50%);
+    background-color: #FF5148 !important;
+    border-color: #FF5148 !important;
+}
